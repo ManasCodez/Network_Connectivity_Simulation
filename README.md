@@ -111,6 +111,28 @@ g++ mesh.cpp -o mesh -lsfml-graphics -lsfml-window -lsfml-system
 ---
 
 ## 📸 Demo
+### 1. Mesh Topology 
+
+---
+<img width="650" alt="Screenshot 2026-04-20 194212" src="https://github.com/user-attachments/assets/bff29514-6f28-4783-875d-dbaaca25d8ac" />
+<img width="650"  alt="Screenshot 2026-04-20 194228" src="https://github.com/user-attachments/assets/bced7cd5-8b6d-4d18-a230-1880141b5b40" />
+
+---
+
+### 2. Star Topology
+<img width="650"  alt="Screenshot 2026-04-20 200041" src="https://github.com/user-attachments/assets/067583e2-3fff-4907-9267-8fc6979ed9bb" />
+<img width="650"  alt="Screenshot 2026-04-20 200105" src="https://github.com/user-attachments/assets/3dbab090-f861-48e9-9a4b-d104d87ed664" />
+<img width="650"  alt="Screenshot 2026-04-20 200119" src="https://github.com/user-attachments/assets/031a2a47-f22b-47b0-965f-4004aa4d1e95" />
+
+---
+
+### 3. Ring Topology
+
+<img width="650"  alt="Screenshot 2026-04-20 200646" src="https://github.com/user-attachments/assets/a6140317-2f6c-4146-ad0a-aa9336cd2de6" />
+<img width="650"  alt="Screenshot 2026-04-20 200709" src="https://github.com/user-attachments/assets/4ff9a2e9-e5fc-4a51-b593-4a00fb023de5" />
+
+
+
 
 
 
