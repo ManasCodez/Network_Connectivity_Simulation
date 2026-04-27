@@ -5,7 +5,7 @@
 
 using namespace std;
 
-// 🔹 Connectivity Check using Adjacency Matrix
+// Connectivity Check using Adjacency Matrix
 
 bool isConnectedMatrix(int n, const vector<vector<bool>> &adjMatrix, const vector<bool> &active)
 {
