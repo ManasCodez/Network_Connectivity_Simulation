@@ -5,7 +5,7 @@
 #include <string>
 
 using namespace std;
-
+    
 int main() {
     sf::RenderWindow window(sf::VideoMode({1000, 800}), "Ring Network Topology Status");
 
