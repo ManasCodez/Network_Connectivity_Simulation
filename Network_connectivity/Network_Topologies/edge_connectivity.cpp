@@ -21,33 +21,36 @@ float getDistToLine(sf::Vector2f p, sf::Vector2f a, sf::Vector2f b)
     return sqrt((p.x - proj.x) * (p.x - proj.x) + (p.y - proj.y) * (p.y - proj.y));
 }
 
-// 🔹 BFS to find connected components and color disconnected nodes
 void updateNetworkStatus(int n, const vector<vector<bool>>& adjMatrix, vector<sf::CircleShape>& nodes, int& disconnectedCount)
 {
     vector<int> compId(n, -1);
     vector<int> compSize(n, 0);
     int currentComp = 0;
 
-    // 1. Group nodes into connected components
+    // 1. Group nodes into connected components using DFS
     for (int i = 0; i < n; i++)
     {
-        if (compId[i] == -1)
+        if (compId[i] == -1) // If node hasn't been visited yet
         {
-            vector<int> q;
-            q.push_back(i);
+            vector<int> stack; // DFS uses a Stack (LIFO)
+            stack.push_back(i);
             compId[i] = currentComp;
             int size = 1;
-            int head = 0;
 
-            while (head < q.size())
+            while (!stack.empty())
             {
-                int u = q[head++];
+                // Pop the top node from the stack
+                int u = stack.back();
+                stack.pop_back();
+
+                // Check all neighbors of the current node
                 for (int v = 0; v < n; v++)
                 {
+                    // If there is an edge AND the neighbor is unvisited
                     if (adjMatrix[u][v] && compId[v] == -1)
                     {
-                        compId[v] = currentComp;
-                        q.push_back(v);
+                        compId[v] = currentComp; // Mark as visited
+                        stack.push_back(v);      // Push to stack to explore its depth
                         size++;
                     }
                 }
